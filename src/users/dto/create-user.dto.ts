@@ -7,11 +7,17 @@ export class CreateUserDto {
   })
   name: string;
 
-  @ApiProperty({
-    description: "'email' será utilizado para autênticação na API",
-    example: 'example@email.com',
-  })
+  /**
+   * 'email' será utilizado para autênticação na API
+   * @example example@email.com
+   */
   email: string;
+
+  /**
+   * se 'nickName' for informado ele será utilizado como identificação no lugar do 'name'
+   * @example Koakovski
+   */
+  nickName?: string;
 
   @ApiProperty({
     description: "'password' será utilizada para autênticação na API",
